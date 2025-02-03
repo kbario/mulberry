@@ -1,8 +1,11 @@
+import { query } from '@solidjs/router';
 import { db } from './db';
 
 export const QUERIES = {
-  getUsers() {
-    'use server';
-    return db.query.characters.findMany();
+  Characters: {
+    GetAll: query(async () => {
+      'use server';
+      return await db.query.characters.findMany();
+    }, 'characters'),
   },
 };
