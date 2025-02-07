@@ -74,98 +74,94 @@ export default function MyComponent() {
   }
 
   return (
-    <>
-      <Switch fallback={<><button onClick={() => signIn()} > sign in </button>
-        <button onClick={async () => {
-          await signInPasskey();
-          //@ts-expect-error
-          session().refetch();
-        }}>
-          sign in passkey
-        </button></>
-      } >
-        <Match when={session().isJustRefetching}>
-          <span>...loading</span>
-        </Match>
-        <Match when={session()?.data?.user}>
-          <div class='flex gap-4'>
-            <div>isPending: {`${session().isPending}`}</div>
-            <div>isRefetching: {`${session().isRefetching}`}</div>
-            <span>{session()?.data?.user?.name}</span>
-            <img src={session()?.data?.user?.image || ""} />
-            <button onClick={async () => await makePassKey()}>
-              makePassKey
-            </button>
-            <button onClick={async () => await refresh()}>
-              reset
-            </button>
-            <button onClick={async () => await signOut()}>
-              sign out
-            </button>
-          </div>
-        </Match>
-      </Switch>
-
-      <ul>
-        <For each={characters()}>
-          {(character) => (
-            <li >
-              <Dialog>
-                <Dialog.Trigger class="dialog__trigger flex gap-4">
-                  <span>
-                    {character.name}
-                  </span>
-                  <form
-                    onClick={(e) => e.stopPropagation()}
-                    action={MUTATIONS.Characters.DeleteCharacterById.with(
-                      character.id
-                    )}
-                    method='post'>
-                    <button type='submit'>x</button>
-                  </form>
-                </Dialog.Trigger>
-                <Dialog.Portal>
-                  <Dialog.Overlay class="dialog__overlay" />
-                  <div class="dialog__positioner">
-                    <Dialog.Content class="dialog__content">
-                      <div class="dialog__header">
-                        <Dialog.Title class="dialog__title">{character.name}</Dialog.Title>
-                        <Dialog.CloseButton class="dialog__close-button">
-                          {/* <CrossIcon /> */} X
-                        </Dialog.CloseButton>
-                      </div>
-                      <Dialog.Description class="dialog__description">
-                        <CharacterInfo character={character} />
-                      </Dialog.Description>
-                    </Dialog.Content>
-                  </div>
-                </Dialog.Portal>
-              </Dialog>
-            </li>
-          )}
-        </For>
-      </ul>
-      <form
-        action={MUTATIONS.Characters.AddCharacter}
-        method='post'>
-        <label>
-          Name:
-          <input
-            type='text'
-            name='name'
-          />
-        </label>
-        <label>
-          Age:
-          <input
-            type='number'
-            name='age'
-          />
-        </label>
-        <button type='submit'>Submit</button>
-      </form>
-
-    </>
+    <Switch fallback={<><button onClick={() => signIn()} > sign in </button>
+      <button onClick={async () => {
+        await signInPasskey();
+        //@ts-expect-error
+        session().refetch();
+      }}>
+        sign in passkey
+      </button></>
+    } >
+      <Match when={session().isJustRefetching}>
+        <span>...loading</span>
+      </Match>
+      <Match when={session()?.data?.user}>
+        <div class='flex gap-4'>
+          <div>isPending: {`${session().isPending}`}</div>
+          <div>isRefetching: {`${session().isRefetching}`}</div>
+          <span>{session()?.data?.user?.name}</span>
+          <img src={session()?.data?.user?.image || ""} />
+          <button onClick={async () => await makePassKey()}>
+            makePassKey
+          </button>
+          <button onClick={async () => await refresh()}>
+            reset
+          </button>
+          <button onClick={async () => await signOut()}>
+            sign out
+          </button>
+        </div>
+        <ul>
+          <For each={characters()}>
+            {(character) => (
+              <li >
+                <Dialog>
+                  <Dialog.Trigger class="dialog__trigger flex gap-4">
+                    <span>
+                      {character.name}
+                    </span>
+                    <form
+                      onClick={(e) => e.stopPropagation()}
+                      action={MUTATIONS.Characters.DeleteCharacterById.with(
+                        character.id
+                      )}
+                      method='post'>
+                      <button type='submit'>x</button>
+                    </form>
+                  </Dialog.Trigger>
+                  <Dialog.Portal>
+                    <Dialog.Overlay class="dialog__overlay" />
+                    <div class="dialog__positioner">
+                      <Dialog.Content class="dialog__content">
+                        <div class="dialog__header">
+                          <Dialog.Title class="dialog__title">{character.name}</Dialog.Title>
+                          <Dialog.CloseButton class="dialog__close-button">
+                            {/* <CrossIcon /> */} X
+                          </Dialog.CloseButton>
+                        </div>
+                        <Dialog.Description class="dialog__description">
+                          <CharacterInfo character={character} />
+                        </Dialog.Description>
+                      </Dialog.Content>
+                    </div>
+                  </Dialog.Portal>
+                </Dialog>
+              </li>
+            )}
+          </For>
+        </ul>
+        <form
+          action={MUTATIONS.Characters.AddCharacter}
+          method='post'>
+          <label>
+            Name:
+            <input
+              type='text'
+              name='name'
+            />
+          </label>
+          <label>
+            Age:
+            <input
+              type='number'
+              name='age'
+            />
+          </label>
+          <button type='submit'>Submit</button>
+        </form>
+      </Match>
+    </Switch>
   );
 }
 
