@@ -11,21 +11,23 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.7",
+    "@kobalte/tailwindcss": "^0.9.0",
     "@libsql/client": "^0.14.0",
     "@solidjs/router": "^0.15.3",
     "@solidjs/start": "^1.0.11",
-    "clerk-solidjs": "^2.0.10",
+    "better-auth": "^1.1.16",
     "dotenv": "^16.4.7",
-    "drizzle-orm": "^0.39.1",
+    "drizzle-orm": "^0.39.2",
     "solid-js": "^1.9.4",
     "vinxi": "^0.5.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.4",
     "drizzle-kit": "^0.30.4",
     "postcss": "^8.5.1",
     "prettier": "3.4.2",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.4"
   },
   "overrides": {
     "vite": "5.4.10"
