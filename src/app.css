@@ -1,5 +1,9 @@
 @import 'tailwindcss';
+@import "uploadthing/tw/v4";
+
 @plugin "@kobalte/tailwindcss";
+@source "../node_modules/@uploadthing/solid/dist";
+/** <-- depends on your project structure */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

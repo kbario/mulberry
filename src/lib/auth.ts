@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "../db/db";
 import { passkey } from "better-auth/plugins/passkey";
+import { createContext } from "solid-js";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {

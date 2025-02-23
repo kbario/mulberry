@@ -1,0 +1,1 @@
+ALTER TABLE `attributes` ADD `value` integer;

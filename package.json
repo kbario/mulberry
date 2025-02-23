@@ -16,10 +16,13 @@
     "@libsql/client": "^0.14.0",
     "@solidjs/router": "^0.15.3",
     "@solidjs/start": "^1.0.11",
+    "@uploadthing/solid": "^7.3.0",
     "better-auth": "^1.1.16",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.2",
+    "solid-icons": "^1.1.0",
     "solid-js": "^1.9.4",
+    "uploadthing": "^7.5.2",
     "vinxi": "^0.5.1"
   },
   "devDependencies": {

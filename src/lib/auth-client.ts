@@ -7,8 +7,10 @@ export const authClient = createAuthClient({
 });
 
 export const signIn = async () => {
-  const data = await authClient.signIn.social({
+  console.group("[auth]: sign in");
+  const { data, error } = await authClient.signIn.social({
     provider: "google",
   });
-  console.log({ data });
+  console.log({ data, error });
+  console.groupEnd();
 };
