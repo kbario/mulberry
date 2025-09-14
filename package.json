@@ -1,41 +1,21 @@
 {
   "name": "mulberry",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "db.generate": "drizzle-kit generate",
-    "db.migrate": "drizzle-kit migrate",
-    "db.push": "drizzle-kit push",
-    "db.studio": "drizzle-kit studio",
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "changeset": "changeset",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
   "dependencies": {
-    "@kobalte/core": "^0.13.7",
-    "@kobalte/tailwindcss": "^0.9.0",
-    "@libsql/client": "^0.14.0",
-    "@solidjs/router": "^0.15.3",
-    "@solidjs/start": "^1.0.11",
-    "@uploadthing/solid": "^7.3.0",
-    "better-auth": "^1.1.16",
-    "dotenv": "^16.4.7",
-    "drizzle-orm": "^0.39.2",
-    "solid-icons": "^1.1.0",
-    "solid-js": "^1.9.4",
-    "uploadthing": "^7.5.2",
-    "vinxi": "^0.5.1"
+    "@changesets/cli": "^2.29.7",
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.4",
-    "drizzle-kit": "^0.30.4",
-    "postcss": "^8.5.1",
-    "prettier": "3.4.2",
-    "tailwindcss": "^4.0.4"
-  },
-  "overrides": {
-    "vite": "5.4.10"
-  },
-  "engines": {
-    "node": ">=18"
+    "turbo": "^2.5.6"
   }
 }

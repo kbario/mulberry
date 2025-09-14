@@ -1,0 +1,14 @@
+{
+  "name": "@mulberry/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "eslint-config-turbo": "^2.5.6"
+  }
+}

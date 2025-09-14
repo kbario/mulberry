@@ -1,0 +1,44 @@
+{
+  "name": "@mulberry/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 6571",
+    "start": "node .output/server/index.mjs",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "format": "biome format",
+    "lint": "biome lint",
+    "check": "biome check"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.1",
+    "@kobalte/core": "^0.13.11",
+    "@t3-oss/env-core": "^0.12.0",
+    "@tailwindcss/vite": "^4.0.6",
+    "@tanstack/router-plugin": "^1.121.3",
+    "@tanstack/solid-form": "^1.0.0",
+    "@tanstack/solid-query": "^5.66.0",
+    "@tanstack/solid-query-devtools": "^5.66.0",
+    "@tanstack/solid-router": "^1.121.3",
+    "@tanstack/solid-router-devtools": "^1.121.3",
+    "@tanstack/solid-start": "1.121.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "solid-js": "^1.9.4",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.6",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^6.3.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.11",
+    "vite-plugin-solid": "^2.11.2"
+  }
+}
