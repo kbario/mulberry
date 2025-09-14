@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "changeset": "changeset",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "web.build": "turbo run build --filter=@mulberry/web",
+    "web.dev": "turbo run dev --filter=@mulberry/web",
+    "web.deploy": "turbo run deploy --filter=@mulberry/web"
   },
   "keywords": [],
   "author": "",

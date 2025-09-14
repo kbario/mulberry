@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite dev --port 6571",
     "start": "node .output/server/index.mjs",
+    "deploy": "npx wrangler deploy .output/server/index.mjs --assets .output/public",
     "build": "vite build",
     "serve": "vite preview",
     "test": "vitest run",
@@ -13,8 +14,11 @@
     "check": "biome check"
   },
   "dependencies": {
+    "@convex-dev/better-auth": "^0.8.0",
     "@fontsource/inter": "^5.1.1",
     "@kobalte/core": "^0.13.11",
+    "@mulberry/convex": "workspace:*",
+    "@mulberry/convex-solid": "workspace:*",
     "@t3-oss/env-core": "^0.12.0",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/router-plugin": "^1.121.3",
@@ -24,8 +28,10 @@
     "@tanstack/solid-router": "^1.121.3",
     "@tanstack/solid-router-devtools": "^1.121.3",
     "@tanstack/solid-start": "1.121.3",
+    "better-auth": "1.3.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "convex": "^1.27.0",
     "solid-js": "^1.9.4",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.6",

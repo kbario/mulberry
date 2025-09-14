@@ -1,0 +1,30 @@
+{
+  "name": "@mulberry/convex",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./dataModel": "./convex/_generated/dataModel.d.ts",
+    "./api": {
+      "types": "./convex/_generated/api.d.ts",
+      "default": "./convex/_generated/api.js"
+    },
+    "./auth": "./convex/auth.ts",
+    "./http": "./convex/http.ts"
+  },
+  "scripts": {
+    "dev": "convex dev",
+    "deploy": "npx convex deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@convex-dev/better-auth": "^0.8.0",
+    "@types/node": "^24.3.3",
+    "better-auth": "1.3.8",
+    "convex": "^1.27.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}
